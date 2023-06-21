@@ -1,7 +1,7 @@
 package core
 
 import (
-	"sa-programming-test/domain/domain/service"
+	"github.com/luis-marro/sa-programming-test/domain/domain/service"
 )
 
 type CoreFizzBuzzService struct {
