@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/luis-marro/sa-programming-test/application"
 	"github.com/luis-marro/sa-programming-test/domain/domain/entity"
@@ -25,14 +24,12 @@ func runIntervals(c *gin.Context) {
 	}
 	// Build the intervals for the request
 	for _, include := range requestBody.Includes {
-		fmt.Println(include)
 		includes = append(includes, entity.Interval{
 			Beginning: include[0],
 			End:       include[1],
 		})
 	}
 	for _, exclude := range requestBody.Excludes {
-		fmt.Println(exclude)
 		excludes = append(excludes, entity.Interval{
 			Beginning: exclude[0],
 			End:       exclude[1],
