@@ -8,3 +8,7 @@ import (
 func LocateIntervalsService() service.DomainIntervalsService {
 	return core.CoreIntervalsService{}
 }
+
+func LocateFizzBuzzService() service.FizzBuzzService {
+	return core.CoreFizzBuzzService{}
+}

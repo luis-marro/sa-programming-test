@@ -42,3 +42,9 @@ func runIntervals(c *gin.Context) {
 	output := intervalService.ExcludeIntervals(includes, excludes)
 	c.JSON(http.StatusOK, output)
 }
+
+func runFizzBuzz(c *gin.Context) {
+	fizzbuzzService := application.LocateFizzBuzzService()
+
+	c.JSON(http.StatusOK, fizzbuzzService.CallFizzBuzz())
+}
