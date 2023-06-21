@@ -1,8 +1,8 @@
 package core
 
 import (
+	"github.com/luis-marro/sa-programming-test/domain/domain/entity"
 	"reflect"
-	"sa-programming-test/domain/domain/entity"
 	"testing"
 )
 
