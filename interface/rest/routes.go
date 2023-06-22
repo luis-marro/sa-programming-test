@@ -12,6 +12,16 @@ type intervalsRequest struct {
 	Excludes [][2]int `json:"excludes"`
 }
 
+// RunIntervalExclusion godoc
+//
+// @Summary	Run the algorithm to get intervals, receiving includes and excludes arrays
+// @Accept		json
+// @Produce	json
+//
+// @Param		intervals	body	intervalsRequest	true	"{ includes: [[10, 100],[200, 300],[400, 500]], excludes: [[95, 205],[410, 420]]}"
+//
+// @Success	200
+// @Router		/algorithm/intervals [post]
 func runIntervals(c *gin.Context) {
 	var requestBody intervalsRequest
 	var includes []entity.Interval
@@ -40,6 +50,11 @@ func runIntervals(c *gin.Context) {
 	c.JSON(http.StatusOK, output)
 }
 
+// RunFizzBuzz  godoc
+//
+//	@Summary	Run classic FizzBuzz algorithm on the interval 1-100
+//	@Produce	json
+//	@Router		/algorithm/fizzbuzz [get]
 func runFizzBuzz(c *gin.Context) {
 	fizzbuzzService := application.LocateFizzBuzzService()
 
