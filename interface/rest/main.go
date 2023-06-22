@@ -15,6 +15,7 @@ func main() {
 	r := gin.Default()
 
 	algorithms := r.Group("/algorithm")
+	algorithms.Use(CORSMiddleware())
 	algorithms.POST("/intervals", runIntervals)
 	algorithms.GET("/fizzbuzz", runFizzBuzz)
 
