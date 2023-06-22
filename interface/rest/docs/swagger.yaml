@@ -14,7 +14,6 @@ definitions:
           type: array
         type: array
     type: object
-host: localhost:8080
 info:
   contact: {}
   description: API containing the two challenges pertaining to the SA programming
